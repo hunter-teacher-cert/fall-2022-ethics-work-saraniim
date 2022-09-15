@@ -2,14 +2,10 @@
 # Saranii Muller
 # CSCI 77800 Fall 2022
 # collaborators: Shana Henry
-# consulted: Kate Maschmeyer
+# consulted: Kate Maschmeyer & Kiana Herr
 # 
 #  * Conway's Game of Life by Team AreWeSentientYet?
-#  * First Last
-#  * collaborators: First Last, First Last
-# 
 
-# 
 #    The Rules of Life:
 
 #    Survivals:
@@ -96,7 +92,7 @@ def genNextBoard(board):
   rows = len(board)
   cols = len(board[0])
   #assemble the board using the parts already created 
-  newBoard = [rows][cols]
+  newBoard = createNewBoard(rows,cols)
   nextCell = '@'
 
   #traverse
@@ -145,4 +141,24 @@ cell02 = getNextGenCell(board, 0, 2)  #should stay dead
 print("(0,2) will turn " ,cell02)
 cell55 = getNextGenCell(board, 5, 5)  #  should stay dead
 print("(5,5) will turn ", cell55)
+
+print("\nTesting generateNextBoard")
+    
+    
+    
+#      TASK:
+#      Once your initial version is running,
+#      try out different starting configurations of living cells...
+#      (Feel free to comment out the above three lines.)
+
+print("Gen X:")
+printBoard(board)
+print("--------------------------\n\n")
+    
+board = genNextBoard(board)
+
+
+print("Gen X+1:")
+printBoard(board)
+print("--------------------------\n\n")
 
